@@ -1,0 +1,5 @@
+streamlit
+groq
+gnews
+beautifulsoup4
+requests
