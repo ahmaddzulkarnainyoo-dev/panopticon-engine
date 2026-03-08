@@ -5,7 +5,8 @@ from gnews import GNews
 import base64
 
 # API Key Hardcoded
-API_KEY = 
+
+API_KEY = st.secrets["GROQ_API_KEY"]
 client = Groq(api_key=API_KEY)
 
 st.set_page_config(page_title="The Panopticon Engine", layout="wide")
@@ -111,3 +112,4 @@ else:
             analysis = analyze_ai("Bedah framing, bias, dan agenda tersembunyi.", news_text)
             st.markdown(analysis)
             st.markdown(get_binary_file_downloader_html(analysis, "Framing_Report"), unsafe_allow_html=True)
+
